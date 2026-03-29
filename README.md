@@ -99,7 +99,7 @@ neon-radio/
 pkg install nodejs
 
 # Clone repo
-git clone https://github.com/username/neon-radio.git
+git clone https://github.com/narentcgf889/neon-radio.git
 cd neon-radio
 
 # Jalankan
@@ -108,7 +108,7 @@ bash run.sh
 
 ### Linux / VPS
 ```bash
-git clone https://github.com/username/neon-radio.git
+git clone https://github.com/narentcgf889/neon-radio.git
 cd neon-radio
 bash run.sh
 ```
