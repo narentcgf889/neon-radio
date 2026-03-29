@@ -1,3 +1,19 @@
+# ─── PROJECT SPECIFIC ──────────────────────────
+# Upload files dari File Manager
+uploads/
+
+# Replit internal
+.replit
+.upm/
+.local/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── NODE ───────────────────────────────────────
 # Logs
 logs
 *.log
