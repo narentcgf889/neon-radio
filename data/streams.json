@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Neon Radio Jazz",
+    "url": "https://streaming.radio.co/s8881e3c30/listen",
+    "genre": "Jazz",
+    "bitrate": "128kbps",
+    "description": "Smooth Jazz 24/7"
+  },
+  {
+    "id": 2,
+    "name": "Radio Lofi Beats",
+    "url": "https://streams.ilovemusic.de/iloveradio17.mp3",
+    "genre": "Lofi",
+    "bitrate": "128kbps",
+    "description": "Lofi Hip Hop Beats"
+  },
+  {
+    "id": 3,
+    "name": "Electronic Pulse",
+    "url": "https://streams.ilovemusic.de/iloveradio2.mp3",
+    "genre": "Electronic",
+    "bitrate": "128kbps",
+    "description": "Electronic & Dance Music"
+  },
+  {
+    "id": 4,
+    "name": "Rock Classics",
+    "url": "https://streams.ilovemusic.de/iloveradio16.mp3",
+    "genre": "Rock",
+    "bitrate": "128kbps",
+    "description": "Best Rock Classics"
+  },
+  {
+    "id": 5,
+    "name": "Pop Hits FM",
+    "url": "https://streams.ilovemusic.de/iloveradio.mp3",
+    "genre": "Pop",
+    "bitrate": "128kbps",
+    "description": "Top Pop Hits"
+  },
+  {
+    "id": 6,
+    "name": "Deep House Vibes",
+    "url": "https://streams.ilovemusic.de/iloveradio6.mp3",
+    "genre": "House",
+    "bitrate": "128kbps",
+    "description": "Deep House Music"
+  },
+  {
+    "id": 7,
+    "name": "Ambient Chill",
+    "url": "https://streams.ilovemusic.de/iloveradio15.mp3",
+    "genre": "Ambient",
+    "bitrate": "128kbps",
+    "description": "Relaxing Ambient Music"
+  },
+  {
+    "id": 8,
+    "name": "Hip Hop Nation",
+    "url": "https://streams.ilovemusic.de/iloveradio12.mp3",
+    "genre": "Hip Hop",
+    "bitrate": "128kbps",
+    "description": "Hip Hop & Rap"
+  }
+]

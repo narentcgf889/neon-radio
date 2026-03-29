@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Neon Radio Mobile</title>
+  <link rel="stylesheet" href="css/mobile.css" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="top-bar">
+  <div class="logo-m">NEON<span>.</span>RADIO</div>
+  <div class="status-bar-m">
+    <span id="clock-m">00:00</span>
+    <span id="batt-m">🔋 --</span>
+    <button onclick="openPlayerModal()" style="background:none;border:none;color:var(--neon-cyan);font-size:18px;cursor:pointer;padding:2px">📻</button>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div id="search-wrap-m">
+  <input type="text" id="search-m" placeholder="🔍 Cari stream..." autocomplete="off" />
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="page-content-m">
+  <div class="swipe-hint">← Geser player bar untuk ganti stream →</div>
+
+  <!-- Stream List -->
+  <div id="stream-list-m">
+    <div style="text-align:center;padding:40px;color:var(--text-dim)">
+      <div style="font-size:30px;margin-bottom:10px">📻</div>
+      <div>Memuat stream...</div>
+    </div>
+  </div>
+
+  <!-- Expanded Player Modal -->
+  <div id="player-modal-m">
+    <div id="modal-drag-handle" class="modal-drag-handle"></div>
+
+    <div class="modal-header-m">
+      <span class="modal-label-m">◉ NEON RADIO</span>
+      <button class="close-modal-m" id="close-modal-m">✕</button>
+    </div>
+
+    <!-- Big Vinyl -->
+    <div class="big-vinyl-m" id="big-vinyl-m">🎵</div>
+
+    <!-- Track Info -->
+    <div class="modal-track-m">
+      <div class="tnow" id="modal-now-m">◉ SELECT A STREAM</div>
+      <div class="tname" id="modal-track-name-m">NEON RADIO</div>
+      <div class="tdesc" id="modal-track-desc-m">Pilih stream dari daftar</div>
+    </div>
+
+    <!-- Visualizer -->
+    <div class="visualizer-m" id="viz-wrap-m">
+      <div class="vbar-m" style="height:5px"></div>
+      <div class="vbar-m" style="height:12px"></div>
+      <div class="vbar-m" style="height:5px"></div>
+      <div class="vbar-m" style="height:20px"></div>
+      <div class="vbar-m" style="height:8px"></div>
+      <div class="vbar-m" style="height:15px"></div>
+      <div class="vbar-m" style="height:5px"></div>
+      <div class="vbar-m" style="height:22px"></div>
+      <div class="vbar-m" style="height:10px"></div>
+      <div class="vbar-m" style="height:6px"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="modal-controls-m">
+      <button class="mc-btn" id="btn-prev-modal" title="Sebelumnya">⏮</button>
+      <button class="mc-btn mc-play" id="btn-play-modal" title="Play/Pause">▶</button>
+      <button class="mc-btn" id="btn-next-modal" title="Berikutnya">⏭</button>
+    </div>
+
+    <!-- EQ Section -->
+    <div class="eq-section-m">
+      <div class="eq-title-m">🎛️ EQUALIZER</div>
+      <div class="eq-bands-m">
+        <div class="eq-band-m">
+          <div class="eq-val-m" id="eq-val-bass-m">0</div>
+          <input type="range" id="eq-bass-m" min="-12" max="12" value="0" />
+          <label>BASS</label>
+        </div>
+        <div class="eq-band-m">
+          <div class="eq-val-m" id="eq-val-mid-m">0</div>
+          <input type="range" id="eq-mid-m" min="-12" max="12" value="0" />
+          <label>MID</label>
+        </div>
+        <div class="eq-band-m">
+          <div class="eq-val-m" id="eq-val-treble-m">0</div>
+          <input type="range" id="eq-treble-m" min="-12" max="12" value="0" />
+          <label>TREBLE</label>
+        </div>
+        <div class="eq-band-m">
+          <div class="eq-val-m" id="eq-val-presence-m">0</div>
+          <input type="range" id="eq-presence-m" min="-12" max="12" value="0" />
+          <label>PRESENCE</label>
+        </div>
+      </div>
+      <div class="reverb-row-m">
+        <label>🌊 Reverb</label>
+        <input type="range" id="reverb-m" min="0" max="100" value="0" />
+        <span class="rev-val-m" id="rev-val-m">0%</span>
+      </div>
+      <div class="eq-presets-m">
+        <button class="preset-btn-m active" data-preset="flat">Flat</button>
+        <button class="preset-btn-m" data-preset="bass">Bass</button>
+        <button class="preset-btn-m" data-preset="vocal">Vocal</button>
+        <button class="preset-btn-m" data-preset="rock">Rock</button>
+        <button class="preset-btn-m" data-preset="jazz">Jazz</button>
+        <button class="preset-btn-m" data-preset="pop">Pop</button>
+        <button class="preset-btn-m" data-preset="classical">Classical</button>
+        <button class="preset-btn-m" data-preset="lofi">Lo-Fi</button>
+      </div>
+    </div>
+
+    <!-- About Section in Modal -->
+    <div class="about-section-m">
+      <div class="about-title-m">ℹ️ ABOUT & SOSIAL MEDIA</div>
+      <div class="about-links-m" id="about-links-m">
+        <div style="color:var(--text-dim);font-size:12px">Memuat...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM PLAYER BAR -->
+<div id="player-bar-m">
+  <div class="player-mini">
+    <div class="mini-vinyl" id="mini-vinyl">🎵</div>
+    <div class="mini-info" id="mini-info">
+      <div class="mini-name" id="mini-name">Pilih Stream</div>
+      <div class="mini-status" id="mini-status">Belum ada yang diputar</div>
+    </div>
+    <div class="mini-controls">
+      <button class="m-btn" id="btn-play-mini" title="Play/Pause">▶</button>
+      <button class="m-btn" id="btn-next-mini" title="Berikutnya">⏭</button>
+    </div>
+  </div>
+
+  <!-- Volume - isolated from swipe gestures -->
+  <div class="player-volume-m">
+    <span class="vol-icon-m">🔉</span>
+    <input type="range" id="vol-slider-m" min="0" max="100" value="80" />
+    <span class="vol-pct-m" id="vol-pct-m">80%</span>
+  </div>
+</div>
+
+<audio id="audio-player-m" preload="none" crossorigin="anonymous"></audio>
+<div id="toast-m"></div>
+
+<script src="js/common.js"></script>
+<script src="js/mobile.js"></script>
+</body>
+</html>

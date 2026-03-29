@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "created": "2024-01-01"
+    }
+  ],
+  "icecast_servers": [],
+  "settings": {
+    "site_title": "Neon Radio",
+    "theme_color": "#00ffff",
+    "allow_registration": false,
+    "max_streams": 50
+  },
+  "notifications": [],
+  "about": {
+    "tiktok": "https://tiktok.com/@neonradio",
+    "whatsapp": "https://wa.me/6281234567890",
+    "discord": "https://discord.gg/neonradio",
+    "instagram": "https://instagram.com/neonradio",
+    "twitter": "https://twitter.com/neonradio",
+    "youtube": "https://youtube.com/@neonradio",
+    "telegram": "https://t.me/neonradio",
+    "facebook": "https://facebook.com/neonradio",
+    "github": "https://github.com/neonradio",
+    "email": "contact@neonradio.com"
+  }
+}
